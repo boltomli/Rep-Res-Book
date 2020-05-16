@@ -403,7 +403,7 @@ scatterplot from data in R's *cars* data set. The script's shortened URL
 is <http://bit.ly/1D5p1w6>.[^chapter_8_9] To run this code and create the
 scatterplot using `source_url()`\index{R function!source\_url}, type:
 
-```{r Ch8SourceURLExample, message=TRUE, warning=FALSE, cache=TRUE, out.width='8cm', out.height='8cm'}
+```{r Ch8SourceURLExample, message=TRUE, warning=FALSE, cache=TRUE, out.width='8cm', out.height='8cm', eval=FALSE}
 library(devtools)
 
 # Run the source code to create the scatter plot

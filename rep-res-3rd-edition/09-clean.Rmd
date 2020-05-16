@@ -513,7 +513,7 @@ Generally, the `merge()` function is the safest and most effective way to merge 
 Chapter \@ref(DataGather): *fin_regulator* and *disprop_data*. The
 simplest way to do this is to use the merge function twice, i.e.:
 
-```{r Ch7AddIsoCodes, include=FALSE}
+```{r Ch7AddIsoCodes, include=FALSE, eval=FALSE}
 # Add iso2c codes to fin_regulator and disprop_data
 # as ID variables for merging
 
@@ -526,7 +526,7 @@ fin_regulator$iso2c <- countrycode(fin_regulator$country,
                                       destination = "iso2c")
 ```
 
-```{r Ch7MergeSimple}
+```{r Ch7MergeSimple, eval=FALSE}
 # Merge fin_regulator and disprop_data
 merged_data_1 <- merge(x = fin_regulator, y = disprop_data,
                      by = "iso2c", all = TRUE)
@@ -556,7 +556,7 @@ country and year variables. To merge data frames based on the overlap of
 two variables (e.g. match Afghanistan-2010 in one data frame with
 Afghanistan-2010 in the other), we need to add the `union()`\index{R function!union} function to `merge`'s `by` argument. Here is a full example:
 
-```{r Ch7MergeFull, tidy=FALSE}
+```{r Ch7MergeFull, tidy=FALSE, eval=FALSE}
 # Merge fin_regulator and disprop_data
 merged_data_2 <- merge(fin_regulator, disprop_data,
                        union("iso2c", "year"),
@@ -596,7 +596,7 @@ observations. For example, let's create a new object called
 *merged_data_2*. Remember that **iso2c** and **year** are in the first and
 second columns of the data frame.
 
-```{r Ch7Duplicated, tidy=FALSE}
+```{r Ch7Duplicated, tidy=FALSE, eval=FALSE}
 # Created a data frame of duplicated country-years
 data_duplicates <- merged_data_2[
                       duplicated(merged_data_2[, 1:2]), ]
@@ -613,7 +613,7 @@ To create a data set without duplicated observations (if there are
 duplicates), add an exclamation point (`!`) before
 `duplicated`, i.e. not duplicated, in the above code.
 
-```{r Ch7NotDuplicated}
+```{r Ch7NotDuplicated, eval=FALSE}
 # Created a data frame of unique country-years
 data_not_duplicates <- merged_data_2[
                           !duplicated(merged_data_2[, 1:2]), ]
@@ -647,7 +647,7 @@ variable name without quotes. For example, imagine that we want to keep
 **country.x** and drop the other variables.[^chapter_7_12] Let's also remove the
 **idn** variable:
 
-```{r Ch7RemoveVars, tidy=FALSE}
+```{r Ch7RemoveVars, tidy=FALSE, eval=FALSE}
 # Remove country.y, country, X, and idn
 final_cleaned <- dplyr::select(data_not_duplicates, -country.y,
                                -country, -idn)
@@ -657,7 +657,7 @@ final_cleaned <- dplyr::rename(final_cleaned,
                                country = country.x)
 ```
 
-```{r Ch7Showfinal_cleanedNames}
+```{r Ch7Showfinal_cleanedNames, eval=FALSE}
 names(final_cleaned)
 ```
 
@@ -709,7 +709,7 @@ fert_wide <- arrange(fert_wide, country)
 R code for creating iso2c country codes with the *countrycode*
 package:
 
-```{r Ch7CountryCodeShow, eval=FALSE, tidy=FALSE}
+```{r Ch7CountryCodeShow, eval=FALSE, tidy=FALSE, eval=FALSE}
 library(countrycode)
 
 fin_regulator$iso2c <- countrycode(fin_regulator$country,

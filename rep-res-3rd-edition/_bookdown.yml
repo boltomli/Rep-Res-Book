@@ -1,10 +1,10 @@
-book_filename: bookdown
+book_filename: Rep-Res-Book
 clean: [packages.bib, bookdown.bbl]
 delete_merged_file: true
 language:
   label:
-    fig: "FIGURE "
-    tab: "TABLE "
+    fig: "图 "
+    tab: "表 "
   ui:
     edit: "Edit"
-    chapter_name: "Chapter "
+    chapter_name: "章 "

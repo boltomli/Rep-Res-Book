@@ -4,11 +4,11 @@ bookdown::gitbook:
     toc:
       collapse: none
       before: |
-        <li><a href="./">A Book Example</a></li>
+        <li><a href="./">Reproducible Research with R and RStudio</a></li>
       after: |
         <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
-    download: [pdf, epub]
-    edit: https://github.com/yihui/bookdown-crc/edit/master/%s
+    download: [pdf]
+    edit: https://github.com/boltomli/Rep-Res-Book/edit/zh/rep-res-3rd-edition/%s
     sharing:
       github: true
       facebook: false

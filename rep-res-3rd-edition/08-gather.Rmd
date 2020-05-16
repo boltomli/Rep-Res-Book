@@ -446,7 +446,7 @@ download data from secure URLs.
 
 As we saw last chapter, in Section \@ref(EnablePublicFolder), `import()` has no problem gathering data from secure URLs, e.g.:
 
-```{r Ch6importhttps}
+```{r Ch6importhttps, eval=FALSE}
 # Place the URL into the object fin_url
 fin_url <- "https://bit.ly/2xlQ2j5"
 

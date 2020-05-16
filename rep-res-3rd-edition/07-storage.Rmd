@@ -169,7 +169,7 @@ many different data formats and is generally more robust than `read.table()`. Us
 Let's download data directly into R from Dropbox. The data set's URL is:
 <https://www.dropbox.com/s/1xapw69efofpg3b/public.fin.msm.model.csv?dl=1>.[^chapter_5_15]
 
-```{r Ch5DropboxDownload, message=TRUE}
+```{r Ch5DropboxDownload, message=TRUE, eval=FALSE}
 # Download data on financial regulators stored on Dropbox
 
 # Load rio
@@ -803,7 +803,7 @@ comma-separated values format stored in a GitHub repository.[^chapter_5_35] The
 URL for the raw (plain-text) version of the data is
 <https://raw.githubusercontent.com/christophergandrud/Disproportionality_Data/master/Disproportionality.csv>.[^chapter_5_36]
 
-```{r Ch5URLAddress, message=TRUE, tidy=FALSE}
+```{r Ch5URLAddress, message=TRUE, tidy=FALSE, eval=FALSE}
 # Place shortened URLinto url object
 url <- "http://bit.ly/14aSjxB"
 
@@ -831,7 +831,7 @@ For example, I have an old version of the disproportionality data. To
 download it, I find this particular version of the file's URL and use it
 in `import()`:
 
-```{r Ch5sourceDataOld, tidy=FALSE, message=FALSE, warning=FALSE}
+```{r Ch5sourceDataOld, tidy=FALSE, message=FALSE, warning=FALSE, eval=FALSE}
 # Create object containing the file's URL
 old_url <- paste0("https://raw.githubusercontent.com/",
                   "christophergandrud/",

@@ -366,7 +366,7 @@ of this with a different source code file. Remember in Chapter \@ref(DataGather)
 different sources on the internet. The CSV is called *main-data.csv* and
 is stored on GitHub at: <http://bit.ly/V0ldsf>.[^chapter_10_15] We can download this data into R and make the following scatterplot matrix (Figure \@ref(fig:BasicFigureExample)) with this code:
 
-```{r Ch10ScatterPlotMatrix, tidy=FALSE, fig.cap='Example of a Scatterplot Matrix', fig.lb='ScatterMatrix'}
+```{r Ch10ScatterPlotMatrix, tidy=FALSE, fig.cap='Example of a Scatterplot Matrix', fig.lb='ScatterMatrix', eval=FALSE}
 # Download data
 main_data <- rio::import("http://bit.ly/V0ldsf",
                         format = "csv" )
@@ -549,7 +549,7 @@ All of the code required to create this graph is on GitHub at:
 \end{figure}
 ````
 
-```{r Ch10MultiLines, echo=FALSE, message = FALSE, warning=FALSE, out.width='10cm', out.height='8cm', fig.cap='\\emph{ggplot2} Time Series Line Plot'}
+```{r Ch10MultiLines, echo=FALSE, message = FALSE, warning=FALSE, out.width='10cm', out.height='8cm', fig.cap='\\emph{ggplot2} Time Series Line Plot', eval=FALSE}
 # Create plot
 devtools::source_url("https://bit.ly/2FaMkOJ")
 ```
